@@ -1,0 +1,135 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+.catGame{
+    height: 400px;
+    width: 1200px;
+    position: relative;
+    overflow: hidden;
+}
+
+#cat{
+    width: 70px;
+    height: 70px;
+    background-image: url(/assets/cat-removebg-preview.png);
+    background-size: 70px 70px;
+    position: absolute;
+    bottom: 28px;
+    left: 20px;
+}
+
+.jump{
+    animation: jump 0.5s linear;
+}
+
+@keyframes jump{
+    0%,
+    100% {
+        bottom: 28px;
+    }
+
+    45%,
+    55% {
+        bottom: 160px;
+    }
+}
+
+#cupcake{
+    width: 70px;
+    height: 80px;
+    background-image: url(/assets/cupcake-removebg-preview.png);
+    background-size: 70px 80px;
+    position: absolute;
+    bottom: 27px;
+    right: -20px;
+}
+
+@keyframes cupcakeMove{
+    0% {
+        right: -125px;
+    }
+
+    100% {
+        right: 100%;
+    }
+}
+
+#road{
+    height: 30px;
+    width: 2000px;
+    background-image: url(/assets/road.png);
+    position: absolute;
+    bottom: 0;
+}
+
+@keyframes roadAnimate {
+    0% {
+        left: 0;
+    }
+
+    100% {
+        left: -800px;
+    }
+}
+
+#cloud{
+    height: 80px;
+    width: 2000px;
+    background-image: url(/assets/cloud.jpg);
+    border-radius: 40px;
+    position: absolute;
+    top: 30px;
+}
+
+
+@keyframes cloudAnimate {
+    0% {
+        left: -2000px;
+    }
+
+    100% {
+        left: 100%;
+    }
+}
+
+#score {
+    height: auto;
+    width: auto;
+    position: absolute;
+    top: 20px;
+    right: 0;
+    color:#525252;
+    font-size: 25px;
+}
+
+#gameOver {
+    display: none;
+    font-size: 70px;
+    position: absolute;
+    left: calc(50% - 181px);
+    top: calc(50% - 100px);
+    width: 362px;
+    height: 80px;
+    color: #525252;
+}
+
+#gameOver img{
+    width: 180px;
+    height: 180px;
+    margin-left: 25%;
+}
+
+#endScore{
+    font-size: 40px;
+    margin-left: 25%;
+}
